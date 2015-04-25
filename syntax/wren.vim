@@ -6,7 +6,7 @@ syntax keyword wrenNull null
 syntax keyword wrenBoolean true false
 syntax match wrenNumber "\v<\d+(\.\d+)?>|\.\d+>"
 
-syntax match wrenEscape "\v\\\"|\\\\|\\a|\\b|\\f|\\n|\\r|\\t|\\v|\\u[[:xdigit:]]{4}"
+syntax match wrenEscape "\v\\0|\\\"|\\\\|\\a|\\b|\\f|\\n|\\r|\\t|\\v|\\u[[:xdigit:]]{4}|\\x[[:xdigit:]]{2}"
 syntax region wrenString contains=wrenEscape start=/\v"/ skip=/\v\\"/ end=/\v"/
 
 syntax keyword wrenConditional else if
