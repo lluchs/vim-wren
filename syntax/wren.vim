@@ -22,6 +22,10 @@ syntax match wrenForeignMethod "\v^\s*foreign\s+(static\s+)?\w+"
 
 syntax match wrenOperator "\V!\|~\|-\|==\?\|!=\|<=\?\|>=\?\|...\?\||\|&\|+\|-\|*\|/\|%"
 
+syntax match wrenField "\v_\w+" display
+syntax match wrenStaticField "\v__\w+" display
+syntax match wrenToplevel "\v<[A-Z]\w*" display
+
 syntax keyword wrenTodo contained TODO FIXME XXX
 syntax match wrenComment contains=wrenTodo "\v//.*$"
 syntax region wrenComment contains=wrenTodo,wrenComment start=#\v/\*# end=#\*/#
@@ -42,6 +46,10 @@ highlight def link wrenForeign Keyword
 highlight def link wrenMethod Function
 highlight def link wrenForeignMethod Function
 highlight def link wrenOperator Operator
+highlight def link wrenIdentifier Identifier
+highlight def link wrenStaticField wrenIdentifier
+highlight def link wrenField wrenIdentifier
+highlight def link wrenToplevel wrenIdentifier
 highlight def link wrenComment Comment
 highlight def link wrenTodo Todo
 highlight def link wrenMisplacedKeyword Error
