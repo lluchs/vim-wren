@@ -17,7 +17,7 @@ syntax keyword wrenNew new contained containedin=wrenMethod
 syntax keyword wrenStatic static contained containedin=wrenMethod,wrenForeignMethod
 syntax keyword wrenForeign foreign contained containedin=wrenForeignMethod
 
-syntax match wrenMethod "\v^\s*(static\s+)?\w+\ze\s*(\([^)]*\))?\s*\{"
+syntax match wrenMethod "\v^\s*(static\s+)?\w+\=?\ze\s*(\([^)]*\))?\s*\{"
 syntax match wrenForeignMethod "\v^\s*foreign\s+(static\s+)?\w+"
 
 syntax match wrenOperator "\V!\|~\|-\|==\?\|!=\|<=\?\|>=\?\|...\?\||\|&\|+\|-\|*\|/\|%"
