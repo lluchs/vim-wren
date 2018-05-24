@@ -9,6 +9,7 @@ syntax match wrenNumber "\v<0x[[:xdigit:]]+>"
 
 syntax match wrenEscape "\v\\0|\\\"|\\\\|\\a|\\b|\\f|\\n|\\r|\\t|\\v|\\u[[:xdigit:]]{4}|\\x[[:xdigit:]]{2}"
 syntax region wrenString contains=wrenEscape start=/\v"/ skip=/\v\\"/ end=/\v"/
+syntax region wrenExpression start=+%(+ end=+)+ skip=+\\)+ contains=wrenString containedin=wrenString
 
 syntax keyword wrenConditional else if
 syntax keyword wrenRepeat break for while
