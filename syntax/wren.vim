@@ -21,6 +21,7 @@ syntax match wrenMethod "\v^\s*(static\s+)?\w+\=?\ze\s*(\([^)]*\))?\s*\{"
 syntax match wrenConstructor "\v^\s*construct\s+\w+\ze\s*(\([^)]*\))?\s*\{"
 syntax match wrenForeignMethod "\v^\s*foreign\s+(static\s+)?\w+"
 
+syntax match wrenOperatorDef "\V\^\s\*\(!\|~\|-\|==\?\|!=\|<=\?\|>=\?\|...\?\||\|&\|+\|-\|*\|/\|%\)\ze\s\*\((\[^)]\*)\)\?\s\*{"
 syntax match wrenOperator "\V!\|~\|-\|==\?\|!=\|<=\?\|>=\?\|...\?\||\|&\|+\|-\|*\|/\|%"
 
 syntax match wrenField "\v_\w+" display
@@ -47,6 +48,7 @@ highlight def link wrenForeign Keyword
 highlight def link wrenMethod Function
 highlight def link wrenConstructor Function
 highlight def link wrenForeignMethod Function
+highlight def link wrenOperatorDef Function
 highlight def link wrenOperator Operator
 highlight def link wrenIdentifier Identifier
 highlight def link wrenStaticField wrenIdentifier
