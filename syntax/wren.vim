@@ -17,7 +17,8 @@ syntax keyword wrenConstruct construct contained containedin=wrenConstructor
 syntax keyword wrenStatic static contained containedin=wrenMethod,wrenForeignMethod
 syntax keyword wrenForeign foreign contained containedin=wrenForeignMethod
 
-syntax match wrenMethod "\v^\s*(static\s+)?\w+\=?\ze\s*(\([^)]*\))?\s*\{"
+" The contains= fixes highlighting of indented if, for, and while.
+syntax match wrenMethod "\v^\s*(static\s+)?\w+\=?\ze\s*(\([^)]*\))?\s*\{" contains=wrenRepeat,wrenConditional
 syntax match wrenConstructor "\v^\s*construct\s+\w+\ze\s*(\([^)]*\))?\s*\{"
 syntax match wrenForeignMethod "\v^\s*foreign\s+(static\s+)?\w+"
 
