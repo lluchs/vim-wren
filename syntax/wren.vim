@@ -33,7 +33,7 @@ syntax keyword wrenTodo contained TODO FIXME XXX
 syntax match wrenComment contains=wrenTodo "\v//.*$"
 syntax region wrenComment contains=wrenTodo,wrenComment start=#\v/\*# end=#\*/#
 
-syntax keyword wrenMisplacedKeyword static foreign
+syntax keyword wrenMisplacedKeyword static
 
 highlight def link wrenNull Constant
 highlight def link wrenBoolean Boolean
