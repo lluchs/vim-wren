@@ -21,6 +21,7 @@ syntax keyword wrenForeign foreign contained containedin=wrenForeignMethod
 syntax match wrenMethod "\v^\s*(static\s+)?\w+\=?\ze\s*(\([^)]*\))?\s*\{" contains=wrenRepeat,wrenConditional
 syntax match wrenConstructor "\v^\s*construct\s+\w+\ze\s*(\([^)]*\))?\s*\{"
 syntax match wrenForeignMethod "\v^\s*foreign\s+(static\s+)?\w+"
+syntax match wrenForeignClass "\v^\s*foreign\s+class"
 
 syntax match wrenOperatorDef "\V\^\s\*\(!\|~\|-\|==\?\|!=\|<=\?\|>=\?\|...\?\||\|&\|+\|-\|*\|/\|%\)\ze\s\*\((\[^)]\*)\)\?\s\*{"
 syntax match wrenOperator "\V!\|~\|-\|==\?\|!=\|<=\?\|>=\?\|...\?\||\|&\|+\|-\|*\|/\|%"
