@@ -48,6 +48,7 @@ highlight def link wrenConstruct Keyword
 highlight def link wrenStatic Keyword
 highlight def link wrenForeign Keyword
 highlight def link wrenMethod Function
+highlight def link wrenForeignClass Keyword
 highlight def link wrenConstructor Function
 highlight def link wrenForeignMethod Function
 highlight def link wrenOperatorDef Function
