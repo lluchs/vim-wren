@@ -33,6 +33,7 @@ syntax match wrenToplevel "\v<[A-Z]\w*" display
 syntax keyword wrenTodo contained TODO FIXME XXX
 syntax match wrenComment contains=wrenTodo "\v//.*$"
 syntax region wrenComment contains=wrenTodo,wrenComment start=#\v/\*# end=#\*/#
+syntax match wrenComment "\%^#!.*"
 
 syntax keyword wrenMisplacedKeyword static
 
