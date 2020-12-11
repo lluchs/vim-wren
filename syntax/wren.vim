@@ -11,7 +11,7 @@ syntax match wrenEscape "\v\\0|\\\"|\\\\|\\a|\\b|\\f|\\n|\\r|\\t|\\v|\\u[[:xdigi
 syntax region wrenString contains=wrenEscape start=/\v"/ skip=/\v\\"/ end=/\v"/
 
 syntax keyword wrenConditional else if
-syntax keyword wrenRepeat break for while
+syntax keyword wrenRepeat break for while continue
 syntax keyword wrenKeyword class in is new return super this var import
 syntax keyword wrenConstruct construct contained containedin=wrenConstructor
 syntax keyword wrenStatic static contained containedin=wrenMethod,wrenForeignMethod
