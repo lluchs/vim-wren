@@ -12,13 +12,13 @@ syntax region wrenString contains=wrenEscape start=/\v"/ skip=/\v\\"/ end=/\v"/
 
 syntax keyword wrenConditional else if
 syntax keyword wrenRepeat break for while continue
-syntax keyword wrenKeyword class as in is new return super this var import
+syntax keyword wrenKeyword class in is new return super this var import
 syntax keyword wrenConstruct construct contained containedin=wrenConstructor
 syntax keyword wrenStatic static contained containedin=wrenMethod,wrenForeignMethod
 syntax keyword wrenForeign foreign contained containedin=wrenForeignMethod
 
 " The contains= fixes highlighting of indented if, for, and while.
-syntax match wrenMethod "\v^\s*(static\s+)?\w+\=?\ze\s*(\([^)]*\))?\s*\{" contains=wrenRepeat,wrenConditional
+syntax match wrenMethod "\v^\s*(static\s+)?(\[?\s*\w+\s*\]?|\w+)\s*\=?\ze\s*(\([^)]*\))?\s*\{" contains=wrenRepeat,wrenConditional
 syntax match wrenConstructor "\v^\s*construct\s+\w+\ze\s*(\([^)]*\))?\s*\{"
 syntax match wrenForeignMethod "\v^\s*foreign\s+(static\s+)?\w+"
 syntax match wrenForeignClass "\v^\s*foreign\s+class"
